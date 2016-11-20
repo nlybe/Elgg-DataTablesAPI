@@ -32,7 +32,7 @@ foreach (entities as $e) {
 }
 $vars['dt_data'] = $dt_data;
    
-elgg_view('datatables_api/datatables_api', $vars)
+elgg_view('datatables_api/datatables_api', $vars);
 ```
 
 ## Future Tasks List
