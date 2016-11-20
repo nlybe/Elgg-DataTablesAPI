@@ -5,9 +5,12 @@ DataTables API for Elgg
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
+DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
+
+At the moment plugin offers the option to create a simple DataTable.
 
 ## How to Use
-The sample code below will display a simple datatable with 3 columns.
+The sample code below will display a DataTable with 3 columns.
 ```php
 // set an array with titles of table
 $vars['dt_titles'] = array(
@@ -23,9 +26,10 @@ foreach (entities as $e) {
     $dt_data_tmp = [];
     $dt_data_tmp['guid'] = $e->getGUID();
     $dt_data_tmp['title'] = $e->title;
-    $dt_data_tmp['likes'] = calculate_likes_function($e);
+    $dt_data_tmp['likes'] = calculate_likes($e);
+
+    array_push($dt_data, $dt_data_tmp);    
 }
-array_push($dt_data, $dt_data_tmp);    
 $vars['dt_data'] = $dt_data;
    
 elgg_view('datatables_api/datatables_api', $vars)
@@ -33,5 +37,5 @@ elgg_view('datatables_api/datatables_api', $vars)
 
 ## Future Tasks List
 - Load data dynamically by using ajax/json
-- Make a classe for datatable, so all parameters will be passed by using method of this class
-- Integrate more options from [DataTables](https://datatables.net/)
+- Make a class for datatables, so all parameters will be passed by using methods of this class
+- Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
