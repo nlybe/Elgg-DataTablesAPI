@@ -36,6 +36,6 @@ elgg_view('datatables_api/datatables_api', $vars)
 ```
 
 ## Future Tasks List
-- Load data dynamically by using ajax/json
-- Make a class for datatables, so all parameters will be passed by using methods of this class
-- Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
+- [ ] Load data dynamically by using ajax/json
+- [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
+- [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
