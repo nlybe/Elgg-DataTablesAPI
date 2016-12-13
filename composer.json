@@ -1,6 +1,6 @@
 {
     "name": "nlybe/datatables_api",
-    "description": "FusionCharts integration on Elgg",
+    "description": "DataTables integration on Elgg",
     "type": "elgg-plugin",
     "keywords": [
         "elgg",
