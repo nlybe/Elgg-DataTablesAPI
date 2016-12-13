@@ -1,13 +1,27 @@
 {
     "name": "nlybe/datatables_api",
+    "description": "FusionCharts integration on Elgg",
     "type": "elgg-plugin",
-    "require": {
-        "composer/installers": ">=1.0.8"
-    },
+    "keywords": [
+        "elgg",
+        "plugin",
+        "datatables"
+    ],
+    "homepage": "https://github.com/nlybe/Elgg-DataTablesAPI",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Nikos Lyberakis",
+            "email": "nikos@lyberakis.gr",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.6",
         "composer/installers": ">=1.0.8",
         "datatables/datatables": ">=1.10.13-dev"
     },        
-    "license": "GPL-2.0"
+    "extra": {
+        "installer-name": "datatables_api"
+    }
 }
