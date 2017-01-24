@@ -14,3 +14,24 @@ table.dataTable thead .sorting_asc {
 table.dataTable thead .sorting_desc {
     background-image: url("datatables_api/images/sort_desc.png")!important;
 }
+
+/* settings */
+.input_box {
+    width:100%; 
+    display: block; 
+    clear:both;
+}
+
+.input_box .elgg-field{
+    max-width: 150px; 
+    display:inline-block;
+}
+
+.input_box input {
+    margin-right: 5px;
+}
+
+.input_box .elgg-input-radios li {
+    display:inline-block;
+    margin-right: 20px;
+}

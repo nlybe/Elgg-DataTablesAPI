@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9019b6f352f80b28f7ce300a4f17c140",
-    "content-hash": "1aa351bdcc854213678ecdeb69ab6ef7",
+    "content-hash": "bafcd10468ee58802ff5fee95ad2a0d4",
     "packages": [
         {
             "name": "composer/installers",
@@ -112,20 +111,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2016-08-13T20:53:52+00:00"
         },
         {
             "name": "datatables/datatables",
-            "version": "dev-master",
+            "version": "1.10.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataTables/DataTables.git",
-                "reference": "130687eeefe980150ad68fca4c8b8b6f5d6c468c"
+                "reference": "403128c42f7b263a0563e862decbe69734b834e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/130687eeefe980150ad68fca4c8b8b6f5d6c468c",
-                "reference": "130687eeefe980150ad68fca4c8b8b6f5d6c468c",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/403128c42f7b263a0563e862decbe69734b834e8",
+                "reference": "403128c42f7b263a0563e862decbe69734b834e8",
                 "shasum": ""
             },
             "type": "library",
@@ -135,19 +134,17 @@
             ],
             "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
             "homepage": "http://www.datatables.net/",
-            "time": "2016-09-30 10:15:24"
+            "time": "2016-12-06T19:40:44+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "datatables/datatables": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.3"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }

@@ -29,6 +29,17 @@ function datatables_api_init() {
         'exports' => 'datatables',
     ));
     
+    // register menu item in admin area
+    if (elgg_get_context() == 'admin') {
+        elgg_register_menu_item('page', array(
+            'name' => 'entities_browser',
+            'href' => elgg_normalize_url('admin/datatables_api/elgg_objects'),
+            'text' => elgg_echo('admin:datatables_api:menu:elgg_objects'),
+            'context' => 'admin',
+            'section' => 'datatables_api_section',
+        ));
+    }     
+    
     // loads the widgets
     // datatables_api_widgets_init();
 

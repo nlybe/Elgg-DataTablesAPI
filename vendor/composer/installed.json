@@ -25,7 +25,7 @@
             "composer/composer": "1.0.*@dev",
             "phpunit/phpunit": "4.1.*"
         },
-        "time": "2016-08-13 20:53:52",
+        "time": "2016-08-13T20:53:52+00:00",
         "type": "composer-plugin",
         "extra": {
             "class": "Composer\\Installers\\Plugin",
@@ -110,20 +110,20 @@
     },
     {
         "name": "datatables/datatables",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "1.10.13",
+        "version_normalized": "1.10.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/DataTables/DataTables.git",
-            "reference": "130687eeefe980150ad68fca4c8b8b6f5d6c468c"
+            "reference": "403128c42f7b263a0563e862decbe69734b834e8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/DataTables/DataTables/zipball/130687eeefe980150ad68fca4c8b8b6f5d6c468c",
-            "reference": "130687eeefe980150ad68fca4c8b8b6f5d6c468c",
+            "url": "https://api.github.com/repos/DataTables/DataTables/zipball/403128c42f7b263a0563e862decbe69734b834e8",
+            "reference": "403128c42f7b263a0563e862decbe69734b834e8",
             "shasum": ""
         },
-        "time": "2016-09-30 10:15:24",
+        "time": "2016-12-06T19:40:44+00:00",
         "type": "library",
         "installation-source": "source",
         "notification-url": "https://packagist.org/downloads/",

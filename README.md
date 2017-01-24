@@ -9,6 +9,8 @@ DataTables is a plug-in for the jQuery Javascript library. It is a highly flexib
 
 At the moment plugin offers the option to create a simple DataTable.
 
+As a usage example there are lists of entities in admin area with option to select which types of entities to include
+
 ## How to Use
 The sample code below will display a DataTable with 3 columns.
 ```php
@@ -34,8 +36,12 @@ $vars['dt_data'] = $dt_data;
    
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
+Also you can see the example on file views/default/admin/datatables_api/elgg_objects.php
 
 ## Future Tasks List
 - [ ] Load data dynamically by using ajax/json
 - [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
 - [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
+- [ ] List of entities: add list of users
+- [ ] List of entities: add list of groups
+- [ ] List of entities: add more filter options
