@@ -42,6 +42,3 @@ Also you can see the example on file views/default/admin/datatables_api/elgg_obj
 - [ ] Load data dynamically by using ajax/json
 - [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
 - [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
-- [ ] List of entities: add list of users
-- [ ] List of entities: add list of groups
-- [ ] List of entities: add more filter options
