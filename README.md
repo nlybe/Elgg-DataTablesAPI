@@ -36,7 +36,7 @@ $vars['dt_data'] = $dt_data;
    
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
-Also you can see the example on file views/default/admin/datatables_api/elgg_objects.php
+Also you can see an example on how to use it at [Elgg Entity Lists](https://github.com/nlybe/Elgg-Entity-Lists) plugin
 
 ## Future Tasks List
 - [ ] Load data dynamically by using ajax/json
