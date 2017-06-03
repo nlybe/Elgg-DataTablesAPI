@@ -20,6 +20,7 @@ $lang = array(
     'datatables_api:admin:elgg_objects:table:header:title' => 'Title',
     'datatables_api:admin:elgg_objects:table:header:type' => 'Type',
     'datatables_api:admin:elgg_objects:table:header:container' => 'Container',
+    'datatables_api:admin:elgg_objects:table:header:access' => 'Access Level',
     'datatables_api:admin:elgg_objects:table:header:owner' => 'Owner',
     'datatables_api:admin:elgg_objects:table:header:created' => 'Created',
     'datatables_api:admin:elgg_objects:table:header:updated' => 'Updated',
@@ -28,11 +29,6 @@ $lang = array(
     'datatables_api:admin:elgg_objects:view_owner' => 'View owner entity',
     'datatables_api:admin:elgg_objects:view_container' => 'View container entity',
     
-    // settings
-    'datatables_api:settings:basic_settings:intro' => 'Select entities to be included in list of entities.',
-    'datatables_api:settings:no' => "No",
-    'datatables_api:settings:yes' => "Yes",    
-
 );
 
 add_translation("en", $lang);

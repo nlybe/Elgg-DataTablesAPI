@@ -1,7 +1,11 @@
-### 2.2.3 (2017-01-09)
+### 2.3.4 (Jun 2017)
+* Removed: Usage sample with listing of entities of the site moved to separate plugin
+* Fixed: Small fixes & removed unused code
+
+### 2.2.3 (Jan 2017)
 * Added: Usage sample with listing of entities of the site
 
-### 2.2.2 (2016-12-07)
+### 2.2.2 (Dec 2016)
 * Fixed: removed unused graphics folder
 
 ### 2.2.1 (Nov 2016)
