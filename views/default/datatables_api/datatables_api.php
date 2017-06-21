@@ -18,7 +18,7 @@ $dt_titles_no = count($dt_titles);
 
 // build table footer
 $dt_sub_titles = elgg_extract('dt_footer', $vars, '');
-if (is_array($dt_sub_titles) && count($dt_footer_tmp) > 0) {
+if (is_array($dt_sub_titles) && count($dt_sub_titles) > 0) {
     foreach ($dt_sub_titles as $element) {
         $dt_footer .= elgg_format_element('th', [], $element); 
     }  

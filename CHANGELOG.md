@@ -1,3 +1,6 @@
+### 2.3.5 (Jun 2017)
+* Fixed: table footer issue
+
 ### 2.3.4 (Jun 2017)
 * Removed: Usage sample with listing of entities of the site moved to separate plugin
 * Fixed: Small fixes & removed unused code
