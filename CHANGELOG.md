@@ -1,3 +1,6 @@
+### 2.3.6 (Jan 2018)
+* Fixed: table footer issue
+
 ### 2.3.5 (Jun 2017)
 * Fixed: table footer issue
 

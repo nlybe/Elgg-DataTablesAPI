@@ -11,6 +11,12 @@ At the moment plugin offers the option to create a simple DataTable.
 
 As a usage example there are lists of entities in admin area with option to select which types of entities to include
 
+## Installation
+Use composer to install this plugin. On site root folder, run the command:
+```
+composer require nlybe/datatables_api
+```
+
 ## How to Use
 The sample code below will display a DataTable with 3 columns.
 ```php

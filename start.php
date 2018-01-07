@@ -22,7 +22,7 @@ function datatables_api_init() {
         'deps' => array('jquery'),
         'exports' => 'datatables',
     ));
-    
+
 }
 
 
