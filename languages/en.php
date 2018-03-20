@@ -29,7 +29,7 @@ $lang = array(
     'datatables_api:admin:elgg_objects:view_owner' => 'View owner entity',
     'datatables_api:admin:elgg_objects:view_container' => 'View container entity',
     
-    'datatables_api:settings:file_export' => 'Enable export buttons',
+    'datatables_api:settings:file_export' => 'Enable buttons',
     'datatables_api:settings:file_export:help' => 'Check this if want to enable buttons for file export (csv, pdf, print etc).',
 );
 
