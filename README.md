@@ -7,7 +7,7 @@ DataTables API for Elgg
 
 DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
 
-At the moment plugin offers the option to create a simple DataTable.
+At the moment plugin offers the option to create a simple DataTable, optionally with export buttons (copy, csv, pdf and print).
 
 As a usage example there are lists of entities in admin area with option to select which types of entities to include
 

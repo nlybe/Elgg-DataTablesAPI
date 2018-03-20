@@ -7,6 +7,10 @@
 elgg_require_js("datatables_api/datatables_api");
 elgg_load_css('datatables_css');
 
+if (DatatablesApiOptions::areButtonsEnabled()) {
+    elgg_load_css('datatables_buttons_css');
+}
+
 $col_sync_err = false;
 
 // build table header 
@@ -47,7 +51,7 @@ if ($col_sync_err) {
 }
 ?>
 
-<table id="example" class="display" cellspacing="0" width="100%">
+<table id="dt_layout" class="display" cellspacing="0" width="100%">
     <thead>
         <tr>
             <?php echo $dt_header; ?>

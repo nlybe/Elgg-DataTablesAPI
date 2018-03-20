@@ -1,3 +1,6 @@
+### 2.3.7 (Mar 2018)
+* Added: Option to add helper buttons such as copy, csv, pdf and print.
+
 ### 2.3.6 (Jan 2018)
 * Fixed: table footer issue
 
