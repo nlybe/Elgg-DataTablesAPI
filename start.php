@@ -13,7 +13,6 @@ function datatables_api_init() {
  	
     // register css files
     elgg_register_css('datatables_css', elgg_get_simplecache_url('datatables.css'));
-//    elgg_register_css('datatables_buttons', elgg_get_simplecache_url('datatables.css'));
     elgg_register_css('datatables_buttons_css', '//cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css');
     
     // register extra css

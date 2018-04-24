@@ -2,3 +2,7 @@
  * Elgg DataTables API plugin
  * @package datatables_api
  */
+
+.dt_hidden {
+    display: none;
+}

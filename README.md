@@ -5,11 +5,15 @@ DataTables API for Elgg
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
-DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
+[DataTables](https://datatables.net/) is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement and offers advanced interaction controls to any HTML table.
 
-At the moment plugin offers the option to create a simple DataTable, optionally with export buttons (copy, csv, pdf and print).
+The plugin for Elgg offers the following options:
+* Create a simple DataTable by loading all records (not suggested for large data set). 
+* Get records from database by using ajax requests.
+* Use server-side options that DataTables provides, so all paging, searching and ordering actions are being made by using ajax requests to get the required data.
+* Add export buttons such as copy, csv, pdf and print, if enabled in settings. 
 
-As a usage example there are lists of entities in admin area with option to select which types of entities to include
+As a usage example you can see the [Elgg Entity Lists](https://github.com/nlybe/Elgg-Entity-Lists) which uses the datatables_api plugin for generating lists of Elgg entities.
 
 ## Installation
 Use composer to install this plugin. On site root folder, run the command:
@@ -42,9 +46,8 @@ $vars['dt_data'] = $dt_data;
    
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
-Also you can see an example on how to use it at [Elgg Entity Lists](https://github.com/nlybe/Elgg-Entity-Lists) plugin
+
 
 ## Future Tasks List
-- [ ] Load data dynamically by using ajax/json
 - [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
 - [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
