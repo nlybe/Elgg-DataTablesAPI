@@ -21,6 +21,12 @@ Use composer to install this plugin. On site root folder, run the command:
 composer require nlybe/datatables_api
 ```
 
+## Future Tasks List
+- [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
+- [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
+- [ ] Fix ordering when use server-side options
+
+
 ## How to Use
 
 ### Example 1 - Use ajax request and Server-side processing
@@ -146,8 +152,3 @@ $vars['dt_data'] = $dt_data;
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
 
-
-## Future Tasks List
-- [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
-- [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
-- [ ] Fix ordering when use server-side options
