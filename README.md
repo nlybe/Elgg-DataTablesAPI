@@ -22,7 +22,106 @@ composer require nlybe/datatables_api
 ```
 
 ## How to Use
-The sample code below will display a DataTable with 3 columns.
+
+### Example 1 - Use ajax request and Server-side processing
+```php
+$dt_options = [
+    'action' => 'demoplugin/users',
+];
+
+$dt_options['headers'] = [ 
+    ['name' => 'id', 'label' => elgg_echo('ID')],
+    ['name' => 'name', 'label' => elgg_echo('Name')],
+    ['name' => 'username', 'label' => elgg_echo('Username')],
+    ['name' => 'email', 'label' => elgg_echo('Email')],
+    ['name' => 'created', 'label' => elgg_echo('Created')],
+    ['name' => 'updated', 'label' => elgg_echo('Updated')],
+    ['name' => 'actions', 'label' => elgg_echo('Actions')],
+];    
+
+echo elgg_view('datatables_api/dtapi_ajax', $dt_options);
+```
+
+On 'views/default/resources/demoplugin/users.php' use the following code:
+```php
+$search = get_input('search');
+
+$options = array(
+    'type' => 'user',
+    'limit' => 0,
+    'count' => true,
+);
+
+$options["joins"] = [];
+$options["wheres"] = [];
+$dbprefix = elgg_get_config('dbprefix');
+if ($search && !empty($search['value'])) {
+    $query = sanitise_string($search['value']);
+		
+    array_push($options["joins"], "JOIN {$dbprefix}users_entity ge ON e.guid = ge.guid");
+    array_push($options["wheres"], "(ge.name LIKE '%$query%' OR ge.username LIKE '%$query%' OR ge.email LIKE '%$query%')");
+}
+
+$totalEntries = elgg_get_entities_from_metadata($options);
+
+$options['count'] = false;
+$options['limit'] = max((int) get_input("length", elgg_get_config('default_limit')), 0);
+$options['offset'] = sanitise_int(get_input ("start", 0), false);
+$entities = elgg_get_entities_from_metadata($options);
+
+$dt_data = [];
+if ($entities) {    
+    foreach ($entities as $e) {
+        $dt_data_tmp = [];
+        
+        // datatable 
+        $dt_data_tmp['id'] = $e->getGUID();
+        $dt_data_tmp['name'] = elgg_view('output/url', array(
+            'href' => $e->getURL(),
+            'text' => $e->name,
+            'title' => elgg_echo('entity_lists:admin:elgg_objects:view_entity'),
+            'is_trusted' => true,
+        )); 
+        $dt_data_tmp['username'] = elgg_view('output/url', array(
+            'href' => $e->getURL(),
+            'text' => $e->username,
+            'title' => elgg_echo('entity_lists:admin:elgg_objects:view_entity'),
+            'is_trusted' => true,
+        )); 
+        
+        $dt_data_tmp['email'] = $e->email;
+        $dt_data_tmp['created'] = date("r", $e->time_created);
+        $dt_data_tmp['updated'] = date("r", $e->time_updated);
+        $dt_data_tmp['actions'] = elgg_view('output/url', array(
+            'href' => "action/entity/delete?guid={$e->getGUID()}",
+            'text' => elgg_view_icon('remove'),
+            'title' => elgg_echo('delete:this'),
+            'is_action' => true,
+            'data-confirm' => elgg_echo('deleteconfirm'),
+        ));
+
+        array_push($dt_data, $dt_data_tmp);       
+    }
+} 
+
+$total_rows = count($entities);
+$draw = get_input('draw');
+$result = [
+    'draw' => isset($draw)?intval($draw):1,
+    'recordsTotal' => $totalEntries,
+    'recordsFiltered' => $totalEntries,
+    'data' => $dt_data,
+];
+
+// release variables
+unset($entities);
+
+echo json_encode($result);
+exit;
+```
+
+### Example 2
+The sample code below will display a DataTable with 3 columns. It's suggested for small about of records only.
 ```php
 // set an array with titles of table
 $vars['dt_titles'] = array(
@@ -51,3 +150,4 @@ echo elgg_view('datatables_api/datatables_api', $vars);
 ## Future Tasks List
 - [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
 - [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
+- [ ] Fix ordering when use server-side options
