@@ -1,5 +1,5 @@
 ### 2.3.8 (Apr 2018)
-* Added: Load entities by using ajax calls
+* Added: Load entities by using ajax requests
 * Added: Use server-side options that DataTables provides
 
 ### 2.3.7 (Mar 2018)
