@@ -17,15 +17,20 @@ define(function (require) {
         require('dataTables_buttons_print_js');
         
         dtOptions = {
-            dom: 'Bfrtip',
+            dom: 'Blfrtip',
             buttons: ['copy', 'csv', 'pdf', 'print']
         }
+        
     }
+    
+    dtOptions['lengthMenu'] = [ [10, 25, 50, -1], [10, 25, 50, "All"] ];
+//    dtOptions['lengthMenu'] = [ 10, 25, 50, 75, 100 ];
     
     dtOptions['ajax'] = $(".dt_hidden").data("ajaxsource");
     dtOptions['pageLength'] = $(".dt_hidden").data("limit");
     dtOptions['processing'] = true;
     dtOptions['serverSide'] = true;
+    
     
     var titles =  $(".dt_hidden").data("titles");
     var titles_arr = titles.split(",");
@@ -34,8 +39,7 @@ define(function (require) {
         list.push({ "data": item }); 
         return list;
     });
-    dtOptions['columns'] = list;
-    
+    dtOptions['columns'] = list;    
     
     $(document).ready(function() {
         $('#dt_layout').DataTable(dtOptions);        

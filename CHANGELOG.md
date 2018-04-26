@@ -1,6 +1,7 @@
 ### 2.3.8 (Apr 2018)
 * Added: Load entities by using ajax requests
 * Added: Use server-side options that DataTables provides
+* Added: Length menu in order to select the number of records to desplay
 
 ### 2.3.7 (Mar 2018)
 * Added: Option to add helper buttons such as copy, csv, pdf and print.
