@@ -23,15 +23,14 @@ define(function (require) {
         
     }
     
-    dtOptions['lengthMenu'] = [ [10, 25, 50, -1], [10, 25, 50, "All"] ];
-//    dtOptions['lengthMenu'] = [ 10, 25, 50, 75, 100 ];
-    
+    dtOptions['lengthMenu'] = [ [3, 10, 25, 50, -1], [3, 10, 25, 50, "All"] ];
+
     dtOptions['ajax'] = $(".dt_hidden").data("ajaxsource");
     dtOptions['pageLength'] = $(".dt_hidden").data("limit");
     dtOptions['processing'] = true;
     dtOptions['serverSide'] = true;
     
-    
+console.log(dtOptions['pageLength']);    
     var titles =  $(".dt_hidden").data("titles");
     var titles_arr = titles.split(",");
     var list = []; 
