@@ -1,7 +1,7 @@
 DataTables API for Elgg
 =======================
 
-![Elgg 2.3](https://img.shields.io/badge/Elgg-2.3-orange.svg?style=flat-square)
+![Elgg 3.0](https://img.shields.io/badge/Elgg-3.0-orange.svg?style=flat-square)
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
@@ -21,15 +21,10 @@ Use composer to install this plugin. On site root folder, run the command:
 composer require nlybe/datatables_api
 ```
 
-## Future Tasks List
-- [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
-- [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
-- [ ] Fix ordering when use server-side options
-
-
 ## How to Use
 
 ### Example 1 - Use ajax request and Server-side processing
+
 ```php
 $dt_options = [
     'action' => 'demoplugin/users',
@@ -127,6 +122,7 @@ exit;
 ```
 
 ### Example 2
+
 The sample code below will display a DataTable with 3 columns. It's suggested for small about of records only.
 ```php
 // set an array with titles of table
@@ -152,3 +148,9 @@ $vars['dt_data'] = $dt_data;
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
 
+
+## Future Tasks List
+
+- [ ] Make a class for datatables, so all parameters will be passed by using methods of this class
+- [ ] Integrate more options from [DataTables](https://datatables.net/examples/index/) like styling, search by column etc
+- [ ] Fix ordering when use server-side options

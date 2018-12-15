@@ -1,3 +1,6 @@
+### 3.9 (Dec 2018)
+- Upgraded to be compatible with Elgg 3.x
+
 ### 2.3.8 (Apr 2018)
 * Added: Load entities by using ajax requests
 * Added: Use server-side options that DataTables provides
