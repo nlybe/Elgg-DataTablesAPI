@@ -4,6 +4,8 @@
  * @package datatables_api
  */
 
+use DatatablesApi\DatatablesApiOptions;
+
 $settings = [
     'button_enabled' => DatatablesApiOptions::areButtonsEnabled(),
 ];

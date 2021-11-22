@@ -20,5 +20,5 @@ return [
     'admin:datatables_api:missing:headers' => 'Table headers are missing',
     
     'datatables_api:settings:file_export' => 'Enable buttons',
-    'datatables_api:settings:file_export:help' => 'Check this if want to enable buttons for file export (csv, pdf, print etc).',
+    'datatables_api:settings:file_export:help' => 'Check this if want to enable buttons for file export (csv, pdf, print etc). After changing the value, caches flush is required.',
 ];

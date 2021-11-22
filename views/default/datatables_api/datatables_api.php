@@ -5,11 +5,7 @@
  */
 
 elgg_require_js("datatables_api/datatables_api");
-elgg_load_css('datatables_css');
-
-if (DatatablesApiOptions::areButtonsEnabled()) {
-    elgg_load_css('datatables_buttons_css');
-}
+elgg_require_css('datatables.css');
 
 $col_sync_err = false;
 

@@ -4,6 +4,8 @@
  * @package datatables_api
  */
 
+namespace DatatablesApi;
+
 class DatatablesApiOptions {
 
     const PLUGIN_ID = 'datatables_api';               // current plugin ID
@@ -27,12 +29,7 @@ class DatatablesApiOptions {
      * @return boolean
      */
     Public Static function areButtonsEnabled() {
-        $file_export = DatatablesApiOptions::getParams('file_export');
-
-        if ($file_export) {
-            return true;
-        }
-        
-        return false;
+        $get_param = self::getParams('file_export');
+        return $get_param === 'yes'?true:false;
     }
 }

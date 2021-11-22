@@ -5,11 +5,7 @@
  */
 
 elgg_require_js("datatables_api/dtapi_ajax");
-elgg_load_css('datatables_css');
-
-if (DatatablesApiOptions::areButtonsEnabled()) {
-    elgg_load_css('datatables_buttons_css');
-}
+elgg_require_css('datatables.css');
 
 $action = elgg_extract('action', $vars, '');
 $headers = elgg_extract('headers', $vars, '');

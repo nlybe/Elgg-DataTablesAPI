@@ -11,7 +11,6 @@ define(function (require) {
         require('datatables.net-buttons');
         require('dataTables_buttons_flash_js');
         require('dataTables_jszip_js');
-        require('dataTables_pdfmake_js');
         require('dataTables_vfs_fonts_js');
         require('dataTables_buttons_html5_js');
         require('dataTables_buttons_print_js');

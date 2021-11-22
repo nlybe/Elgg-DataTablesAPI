@@ -1,23 +1,26 @@
 DataTables API for Elgg
 =======================
 
-![Elgg 3.0](https://img.shields.io/badge/Elgg-3.0-orange.svg?style=flat-square)
+![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
 [DataTables](https://datatables.net/) is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement and offers advanced interaction controls to any HTML table.
 
 The plugin for Elgg offers the following options:
-* Create a simple DataTable by loading all records (not suggested for large data set). 
+
+* Create a simple DataTable by loading all records (not suggested for large data set).
 * Get records from database by using ajax requests.
 * Use server-side options that DataTables provides, so all paging, searching and ordering actions are being made by using ajax requests to get the required data.
-* Add export buttons such as copy, csv, pdf and print, if enabled in settings. 
+* Add export buttons such as copy, csv, pdf and print, if enabled in settings.
 
 As a usage example you can see the [Elgg Entity Lists](https://github.com/nlybe/Elgg-Entity-Lists) which uses the datatables_api plugin for generating lists of Elgg entities.
 
 ## Installation
+
 Use composer to install this plugin. On site root folder, run the command:
-```
+
+```php
 composer require nlybe/datatables_api
 ```
 
@@ -44,6 +47,7 @@ echo elgg_view('datatables_api/dtapi_ajax', $dt_options);
 ```
 
 On 'views/default/resources/demoplugin/users.php' use the following code:
+
 ```php
 $search = get_input('search');
 
@@ -58,7 +62,7 @@ $options["wheres"] = [];
 $dbprefix = elgg_get_config('dbprefix');
 if ($search && !empty($search['value'])) {
     $query = sanitise_string($search['value']);
-		
+
     array_push($options["joins"], "JOIN {$dbprefix}users_entity ge ON e.guid = ge.guid");
     array_push($options["wheres"], "(ge.name LIKE '%$query%' OR ge.username LIKE '%$query%' OR ge.email LIKE '%$query%')");
 }
@@ -124,6 +128,7 @@ exit;
 ### Example 2
 
 The sample code below will display a DataTable with 3 columns. It's suggested for small about of records only.
+
 ```php
 // set an array with titles of table
 $vars['dt_titles'] = array(
@@ -147,7 +152,6 @@ $vars['dt_data'] = $dt_data;
    
 echo elgg_view('datatables_api/datatables_api', $vars);
 ```
-
 
 ## Future Tasks List
 
