@@ -7,6 +7,11 @@
 use DatatablesApi\Elgg\Bootstrap;
 
 return [
+    'plugin' => [
+        'name' => 'DataTables API',
+		'version' => '4.11',
+		'dependencies' => [],
+	],	
     'bootstrap' => Bootstrap::class,
     'settings' => [
         'file_export' => 'no',

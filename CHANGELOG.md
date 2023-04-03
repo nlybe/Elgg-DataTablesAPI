@@ -1,5 +1,10 @@
 # Change Log
 
+## 4.11 (Apr 2023)
+
+- Upgraded for Elgg 4.3.x compatibility
+- Code improvements
+
 ## 3.10 (Nov 2021)
 
 - Upgraded to be compatible with Elgg 3.3.x

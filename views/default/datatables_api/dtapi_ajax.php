@@ -39,7 +39,7 @@ else {
     // set same as header if not set
     $dt_footer = $dt_header; 
 }
-error_log(elgg_normalize_url($action));
+
 echo elgg_format_element('div', [
         'class' => 'dt_hidden', 
         'data-ajaxsource' => elgg_normalize_url($action),

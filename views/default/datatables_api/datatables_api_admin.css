@@ -39,3 +39,7 @@ table.dataTable thead .sorting_desc {
 .dt_hidden {
     display: none;
 }
+
+.dt-buttons {
+    margin-bottom: 20px;
+}

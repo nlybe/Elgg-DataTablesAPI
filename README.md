@@ -1,7 +1,7 @@
 DataTables API for Elgg
 =======================
 
-![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
+![Elgg 4.3](https://img.shields.io/badge/Elgg-4.3-orange.svg?style=flat-square)
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
@@ -61,7 +61,7 @@ $options["joins"] = [];
 $options["wheres"] = [];
 $dbprefix = elgg_get_config('dbprefix');
 if ($search && !empty($search['value'])) {
-    $query = sanitise_string($search['value']);
+    $query = $search['value'];
 
     array_push($options["joins"], "JOIN {$dbprefix}users_entity ge ON e.guid = ge.guid");
     array_push($options["wheres"], "(ge.name LIKE '%$query%' OR ge.username LIKE '%$query%' OR ge.email LIKE '%$query%')");
@@ -71,7 +71,7 @@ $totalEntries = elgg_get_entities_from_metadata($options);
 
 $options['count'] = false;
 $options['limit'] = max((int) get_input("length", elgg_get_config('default_limit')), 0);
-$options['offset'] = sanitise_int(get_input ("start", 0), false);
+$options['offset'] = get_input ("start", 0);
 $entities = elgg_get_entities_from_metadata($options);
 
 $dt_data = [];
