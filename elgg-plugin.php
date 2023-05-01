@@ -9,7 +9,7 @@ use DatatablesApi\Elgg\Bootstrap;
 return [
     'plugin' => [
         'name' => 'DataTables API',
-		'version' => '4.11',
+		'version' => '4.12',
 		'dependencies' => [],
 	],	
     'bootstrap' => Bootstrap::class,

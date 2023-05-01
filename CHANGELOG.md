@@ -1,5 +1,9 @@
 # Change Log
 
+## 4.12 (May 2023)
+
+- Updated deprecated JS code
+
 ## 4.11 (Apr 2023)
 
 - Upgraded for Elgg 4.3.x compatibility

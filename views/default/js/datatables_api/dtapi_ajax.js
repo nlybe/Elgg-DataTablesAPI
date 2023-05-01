@@ -38,7 +38,7 @@ define(function (require) {
     });
     dtOptions['columns'] = list;    
     
-    $(document).ready(function() {
+    $(function() {
         $('#dt_layout').DataTable(dtOptions);        
     });
     
