@@ -27,13 +27,6 @@ class Bootstrap extends DefaultPluginBootstrap {
 	 */
 	protected function initViews() {
 		
-		// register extra css
-		elgg_extend_view('elgg.css', 'datatables_api/datatables_api.css');
-		elgg_extend_view('css/admin', 'datatables_api/datatables_api_admin.css');
-
-		// file export buttons
-		elgg_extend_view('elgg.css', '//cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css');
-		
 		// register settings js
 		elgg_register_simplecache_view('datatables_api/settings.js');    
 			

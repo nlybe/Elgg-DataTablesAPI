@@ -1,5 +1,9 @@
 # Change Log
 
+## 4.13 (June 2023)
+
+- Moved css declaration to elgg-plugins.php
+
 ## 4.12 (May 2023)
 
 - Updated deprecated JS code
