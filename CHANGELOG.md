@@ -1,5 +1,9 @@
 # Change Log
 
+## 5.14 (June 2023)
+
+- Upgraded for Elgg 5.x compatibility
+
 ## 4.13 (June 2023)
 
 - Moved css declaration to elgg-plugins.php

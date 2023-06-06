@@ -1,7 +1,7 @@
 DataTables API for Elgg
 =======================
 
-![Elgg 4.3](https://img.shields.io/badge/Elgg-4.3-orange.svg?style=flat-square)
+![Elgg 5.0](https://img.shields.io/badge/Elgg-5.0-orange.svg?style=flat-square)
 
 [DataTables](https://datatables.net/) integration on Elgg. This plugin offers an API which can be used from other plugins on Elgg platforms in order to populate information in data tables.
 
